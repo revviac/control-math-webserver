@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-template"
+name = "control-math-webserver"
 version = "0.1.0"
 description = ""
 authors = ["Viacheslav Ponomarev <viacheslav.ponomarev.0@gmail.com>"]
