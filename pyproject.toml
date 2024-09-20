@@ -13,6 +13,8 @@ pydantic = "^2.9.2"
 uvicorn = "^0.30.6"
 colorama = "^0.4.6"
 control = "^0.10.1"
+numpy = "^1.24.0"
+scipy = "^1.14.1"
 
 
 [tool.poetry.group.dev.dependencies]
