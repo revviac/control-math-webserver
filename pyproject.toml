@@ -12,6 +12,7 @@ fastapi = "^0.115.0"
 pydantic = "^2.9.2"
 uvicorn = "^0.30.6"
 colorama = "^0.4.6"
+control = "^0.10.1"
 
 
 [tool.poetry.group.dev.dependencies]
