@@ -1,9 +1,0 @@
-version: "3.9"
-name: "control-math-webserver"
-
-services:
-  python-webserver:
-    build:
-      context: .
-    ports:
-      - "8080:80"
