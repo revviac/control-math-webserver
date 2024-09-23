@@ -41,7 +41,9 @@ class LsimRequest(BaseModel):
 
 
 class LsimResponse(BaseModel):
-    cv_values: list[float]
+    cv_values: list[list[float]]
+    T: list[float]
+    state: list[list[float]]
 
 
 @router.post("/lsim")
@@ -54,7 +56,6 @@ def lsim(request: LsimRequest):
         T=request.observation_time_array,
     )
 
-    y_out, _, _ = lsim_response
-    cv_prediction: npt.NDArray[np.float32] = y_out[-1]
+    y_out, T, x_out = lsim_response
 
-    return LsimResponse(cv_values=cv_prediction.flatten().tolist())
+    return LsimResponse(cv_values=y_out.tolist(), T=T.tolist(), state=x_out.tolist())
